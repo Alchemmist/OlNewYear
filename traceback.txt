@@ -1,28 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/gui.rpy", line 124, in script
-    define gui.button_text_font = gui.interface_text_font
-  File "game/gui.rpy", line 124, in <module>
-    define gui.button_text_font = gui.interface_text_font
-AttributeError: 'StoreModule' object has no attribute 'interface_text_font'
+TypeError: cannot unpack non-iterable int object
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/gui.rpy", line 124, in script
-    define gui.button_text_font = gui.interface_text_font
-  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2508, in execute
-    self.set()
-  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 2522, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/gui.rpy", line 124, in <module>
-    define gui.button_text_font = gui.interface_text_font
-AttributeError: 'StoreModule' object has no attribute 'interface_text_font'
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Илья\Downloads\renpy-8.1.3-sdk\renpy\display\video.py", line 565, in render
+    w, h = self.size
+TypeError: cannot unpack non-iterable int object
 
 Windows-7-6.1.7601-SP1 AMD64
 Ren'Py 8.1.3.23091805
 2024 1.0
-Fri Dec 29 01:18:56 2023
+Fri Dec 29 16:00:56 2023
