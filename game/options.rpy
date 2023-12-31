@@ -191,8 +191,15 @@ init python:
 
     ## Чтобы архивировать файлы, классифицируйте их, например, как 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.jpeg', 'archive')
+
+    build.classify('game/**.ogv', 'archive')
+
+    build.classify('game/**.mp3', 'archive')
+
+    build.classify('game/**.rpy', 'archive')
 
     ## Файлы, соответствующие образцам документации, дублируются в приложениях
     ## Mac, чтобы они появлялись и в приложении, и в zip архиве.
